@@ -1,4 +1,4 @@
-export default function(state = {}, action) {
+export default (state = {}, action) => {
   switch (action.type) {
     case 'LETTER_INPUT':
       return Object.assign({}, state, { [action.letter]: true });
