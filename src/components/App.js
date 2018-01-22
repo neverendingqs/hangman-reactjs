@@ -1,3 +1,9 @@
 import React from 'react';
+import Input from '../containers/Input';
+import Status from '../containers/Status';
 
-export default () => <h1>First app</h1>;
+export default () =>
+  <div>
+    <Status />
+    <Input />
+  </div>;
