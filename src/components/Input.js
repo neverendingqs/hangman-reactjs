@@ -10,8 +10,9 @@ const Input = ({ lettersStatus, onClick }) =>
   <div className="row">
     {letters.map(letter => (
       <button
-        type="button"
-        className="btn btn-default"
+        key={`input_${letter}`}
+        type='button'
+        className='btn btn-default'
         onClick={() => onClick(letter)}
       >{letter}</button>
     ))}
