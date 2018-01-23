@@ -1,8 +1,18 @@
-import React from 'react';
+import React, { Component } from "react";
 
-const Status = ({ lettersStatus }) =>
-  <div className="row">
-    lettersStatus: {JSON.stringify(lettersStatus)}
-  </div>;
+class Status extends Component {
+  maskedWord() {
+    return this.props.currentWord
+      .split('')
+      .map(x => this.props.lettersStatus[x] ? x : '_')
+      .join('');
+  }
+
+  render() {
+    return <div className="row">
+      <h2>{this.maskedWord()}</h2>
+    </div>;
+  }
+}
 
 export default Status;
