@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 
 import Status from '../components/Status';
 
-const mapStateToProps = state => console.log(state) || ({
+const mapStateToProps = state => ({
   currentWord: state.currentWord,
   lettersStatus: state.lettersStatus
 });
