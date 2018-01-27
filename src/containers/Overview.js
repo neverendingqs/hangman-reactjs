@@ -1,10 +1,10 @@
 import { connect } from 'react-redux';
 
 import Overview from '../components/Overview';
-import numWrongGuessesSelector from '../selectors/numWrongGuesses';
+import numGuessesRemainingSelector from '../selectors/numGuessesRemaining';
 
 const mapStateToProps = state => ({
-  numGuessesLeft: numWrongGuessesSelector(state)
+  numGuessesLeft: numGuessesRemainingSelector(state)
 });
 
 const connector = connect(mapStateToProps);
