@@ -6,9 +6,10 @@ const currentWordSelector = state => state.currentWord;
 export default createSelector(
   [guessedLettersSelector, currentWordSelector],
   (guessedLetters, currentWord) => guessedLetters.reduce(
-    (numWrongGuesses, letter) => currentWord.includes(letter)
-      ? numWrongGuesses
-      : numWrongGuesses + 1,
-    0
+    (map, letter) => {
+      map[letter] = currentWord.includes(letter);
+      return map;
+    },
+    {}
   )
 );
