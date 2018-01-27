@@ -6,13 +6,14 @@ const letters = [
   's', 't', 'u', 'v', 'w', 'x', 'y', 'z'
 ];
 
-const Keyboard = ({ lettersStatus, onClick }) =>
+const Keyboard = ({ lettersStatus, isGameEnded, onClick }) =>
   <div className="row">
     {letters.map(letter => (
       <button
         key={`input_${letter}`}
         type='button'
         className='btn btn-default'
+        disabled={isGameEnded}
         onClick={() => onClick(letter)}
       >{letter}</button>
     ))}
