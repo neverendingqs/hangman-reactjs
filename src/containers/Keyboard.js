@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { bindActionCreators } from "redux";
+import { bindActionCreators } from 'redux';
 
 import { letterInput } from '../actions';
 import Keyboard from '../components/Keyboard';

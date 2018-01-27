@@ -5,4 +5,4 @@ export default (state = 'hangman', action) => {
     default:
       return state;
   }
-}
+};
