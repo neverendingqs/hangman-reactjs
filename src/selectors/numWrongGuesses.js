@@ -1,9 +1,17 @@
 import { createSelector } from 'reselect';
 
-import numLettersGuessedSelector from './numLettersGuessed';
-const maxGuessesSelector = state => state.maxGuesses;
+const lettersStatusSelector = state => state.lettersStatus;
+const currentWordSelector = state => state.currentWord;
 
 export default createSelector(
-  [numLettersGuessedSelector, maxGuessesSelector],
-  (numLettersGuessed, maxGuesses) => maxGuesses - numLettersGuessed
+  [lettersStatusSelector, currentWordSelector],
+  (lettersStatus, currentWord) => Object
+    .keys(lettersStatus)
+    .filter(key => lettersStatus[key])
+    .reduce(
+      (acc, letter) => currentWord.includes(letter)
+        ? acc
+        : acc + 1,
+      0
+    )
 );
