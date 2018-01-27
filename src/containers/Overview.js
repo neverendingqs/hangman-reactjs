@@ -1,11 +1,10 @@
 import { connect } from 'react-redux';
 
 import Overview from '../components/Overview';
+import numWrongGuessesSelector from '../selectors/numWrongGuesses';
 
 const mapStateToProps = state => ({
-  currentWord: state.currentWord,
-  lettersStatus: state.lettersStatus,
-  maxGuesses: state.maxGuesses
+  numGuessesLeft: numWrongGuessesSelector(state)
 });
 
 const connector = connect(mapStateToProps);
