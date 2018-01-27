@@ -1,10 +1,10 @@
 import { connect } from 'react-redux';
 
 import Diagram from '../components/Diagram';
+import maskedWordSelector from '../selectors/maskedWord';
 
 const mapStateToProps = state => ({
-  currentWord: state.currentWord,
-  lettersStatus: state.lettersStatus
+  maskedWord: maskedWordSelector(state)
 });
 
 const connector = connect(mapStateToProps);
