@@ -3,4 +3,4 @@ export default (state = 10, action) => {
     default:
       return state;
   }
-}
+};
