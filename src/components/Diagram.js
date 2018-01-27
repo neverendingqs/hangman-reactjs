@@ -1,6 +1,6 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
-class Status extends Component {
+class Diagram extends Component {
   maskedWord() {
     return this.props.currentWord
       .split('')
@@ -15,4 +15,4 @@ class Status extends Component {
   }
 }
 
-export default Status;
+export default Diagram;

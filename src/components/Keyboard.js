@@ -6,7 +6,7 @@ const letters = [
   's', 't', 'u', 'v', 'w', 'x', 'y', 'z'
 ];
 
-const Input = ({ lettersStatus, onClick }) =>
+const Keyboard = ({ lettersStatus, onClick }) =>
   <div className="row">
     {letters.map(letter => (
       <button
@@ -19,5 +19,5 @@ const Input = ({ lettersStatus, onClick }) =>
     lettersStatus: {JSON.stringify(lettersStatus)}
   </div>;
 
-export default Input;
+export default Keyboard;
 
