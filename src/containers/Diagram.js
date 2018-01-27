@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 
-import Status from '../components/Status';
+import Diagram from '../components/Diagram';
 
 const mapStateToProps = state => ({
   currentWord: state.currentWord,
@@ -8,4 +8,4 @@ const mapStateToProps = state => ({
 });
 
 const connector = connect(mapStateToProps);
-export default connector(Status);
+export default connector(Diagram);

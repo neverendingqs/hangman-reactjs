@@ -1,11 +1,11 @@
 import React from 'react';
+import Diagram from '../containers/Diagram';
 import Keyboard from '../containers/Keyboard';
 import Overview from '../containers/Overview';
-import Status from '../containers/Status';
 
 export default () =>
   <div>
-    <Status />
+    <Diagram />
     <Overview />
     <Keyboard />
   </div>;
