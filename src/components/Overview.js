@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Overview = ({
-  isGameEnded,
+  isForfeited,
   forfeitOnClick,
   newGameOnClick,
   numGuessesLeft
@@ -19,10 +19,10 @@ const Overview = ({
     <button
       type='button'
       className='btn btn-danger'
-      disabled={isGameEnded}
+      disabled={isForfeited}
       onClick={() => forfeitOnClick()}
     >
-      Forfeit
+      Show Word
     </button>
   </div>;
 
