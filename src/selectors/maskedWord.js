@@ -1,12 +1,12 @@
 import { createSelector } from 'reselect';
 
-const isForfeitedSelector = state => state.isForfeited;
+const hasUserForfeitedSelector = state => state.hasUserForfeited;
 const lettersStatusSelector = state => state.lettersStatus;
 const currentWordSelector = state => state.currentWord;
 
 export default createSelector(
-  [isForfeitedSelector, lettersStatusSelector, currentWordSelector],
-  (isForfeited, lettersStatus, currentWord) => isForfeited
+  [hasUserForfeitedSelector, lettersStatusSelector, currentWordSelector],
+  (hasUserForfeited, lettersStatus, currentWord) => hasUserForfeited
     ? currentWord
     : currentWord
       .split('')

@@ -8,7 +8,7 @@ import hasUserWonSelector from '../selectors/hasUserWon';
 
 const mapStateToProps = state => ({
   hasUserWon: hasUserWonSelector(state),
-  isForfeited: state.isForfeited,
+  hasUserForfeited: state.hasUserForfeited,
   numGuessesLeft: numGuessesRemainingSelector(state)
 });
 

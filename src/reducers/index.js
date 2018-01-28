@@ -1,13 +1,13 @@
 import { combineReducers } from 'redux';
 
 import currentWord from './currentWord';
-import isForfeited from './isForfeited';
+import hasUserForfeited from './hasUserForfeited';
 import lettersStatus from './lettersStatus';
 import maxGuesses from './maxGuesses';
 
 const rootReducer = combineReducers({
   currentWord,
-  isForfeited,
+  hasUserForfeited,
   lettersStatus,
   maxGuesses
 });
