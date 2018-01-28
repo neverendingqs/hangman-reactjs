@@ -1,11 +1,10 @@
 import { createSelector } from 'reselect';
 
 import hasUserWonSelector from './hasUserWon';
-import numGuessesRemainingSelector from './numGuessesRemaining';
-const isForfeitedSelector = state => state.isForfeited;
+import hasUserLostSelector from './hasUserLost';
+const hasUserForfeitedSelector = state => state.hasUserForfeited;
 
 export default createSelector(
-  [hasUserWonSelector, numGuessesRemainingSelector, isForfeitedSelector],
-  (hasUserWon, numGuessesRemaining, isForfeited) =>
-    hasUserWon || numGuessesRemaining == 0 || isForfeited
+  [hasUserWonSelector, hasUserLostSelector, hasUserForfeitedSelector],
+  (hasUserWon, hasUserLost, hasUserForfeited) => hasUserWon || hasUserLost || hasUserForfeited
 );

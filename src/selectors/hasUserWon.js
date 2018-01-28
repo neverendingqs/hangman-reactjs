@@ -1,10 +1,10 @@
 import { createSelector } from 'reselect';
 
 import maskedWordSelector from './maskedWord';
-const isForfeitedSelector = state => state.isForfeited;
+const hasUserForfeitedSelector = state => state.hasUserForfeited;
 
 export default createSelector(
-  [maskedWordSelector, isForfeitedSelector],
-  (maskedWord, isForfeited) =>
-    !maskedWord.includes('_') && !isForfeited
+  [maskedWordSelector, hasUserForfeitedSelector],
+  (maskedWord, hasUserForfeited) =>
+    !maskedWord.includes('_') && !hasUserForfeited
 );
