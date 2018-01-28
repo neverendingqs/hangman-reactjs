@@ -1,8 +1,10 @@
-export default (state = 'hangman', action) => {
+import randomWords from 'random-words';
+
+export default (state = undefined, action) => {
   switch (action.type) {
     case 'NEW_GAME':
-      return 'hangman'; // TODO
+      return randomWords();
     default:
-      return state;
+      return state || randomWords();
   }
 };
