@@ -1,12 +1,11 @@
 import { createSelector } from 'reselect';
 
-import maskedWordSelector from './maskedWord';
+import hasUserWonSelector from './hasUserWon';
 import numGuessesRemainingSelector from './numGuessesRemaining';
 const isForfeitedSelector = state => state.isForfeited;
 
 export default createSelector(
-  [maskedWordSelector, numGuessesRemainingSelector, isForfeitedSelector],
-  (maskedWord, numGuessesRemaining, isForfeited) => !maskedWord.includes('_')
-    || numGuessesRemaining == 0
-    || isForfeited
+  [hasUserWonSelector, numGuessesRemainingSelector, isForfeitedSelector],
+  (hasUserWon, numGuessesRemaining, isForfeited) =>
+    hasUserWon || numGuessesRemaining == 0 || isForfeited
 );

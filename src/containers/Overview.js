@@ -4,10 +4,12 @@ import { bindActionCreators } from 'redux';
 import { forfeitGame, newGame } from '../actions';
 import Overview from '../components/Overview';
 import numGuessesRemainingSelector from '../selectors/numGuessesRemaining';
+import hasUserWonSelector from '../selectors/hasUserWon';
 
 const mapStateToProps = state => ({
-  numGuessesLeft: numGuessesRemainingSelector(state),
-  isForfeited: state.isForfeited
+  hasUserWon: hasUserWonSelector(state),
+  isForfeited: state.isForfeited,
+  numGuessesLeft: numGuessesRemainingSelector(state)
 });
 
 const mapDispatchToProps = dispatch => bindActionCreators({
