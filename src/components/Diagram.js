@@ -13,6 +13,6 @@ const Diagram = ({ maskedWord }) =>
     style={maskedWordStyle}
   >
     {maskedWord}
-  </p>
+  </p>;
 
 export default Diagram;

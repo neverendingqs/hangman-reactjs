@@ -12,12 +12,12 @@ export default () =>
     </div>
     <div className="row">
       <div className="col-md-12">
-      <Overview />
+        <Overview />
       </div>
     </div>
     <div className="row">
       <div className="col-md-12">
-      <Keyboard />
+        <Keyboard />
       </div>
     </div>
   </div>;
