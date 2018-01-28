@@ -5,7 +5,19 @@ import Overview from '../containers/Overview';
 
 export default () =>
   <div>
-    <Diagram />
-    <Overview />
-    <Keyboard />
+    <div className="row">
+      <div className="col-md-12">
+        <Diagram />
+      </div>
+    </div>
+    <div className="row">
+      <div className="col-md-12">
+        <Overview />
+      </div>
+    </div>
+    <div className="row">
+      <div className="col-md-12">
+        <Keyboard />
+      </div>
+    </div>
   </div>;

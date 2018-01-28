@@ -1,5 +1,13 @@
 import React from 'react';
 
+const paragraphStyle = {
+  fontSize: '30px',
+};
+
+const buttonsStyle = {
+  margin: '2px',
+};
+
 const Overview = ({
   hasUserForfeited,
   hasUserWon,
@@ -7,12 +15,15 @@ const Overview = ({
   newGameOnClick,
   numGuessesLeft
 }) =>
-  <div className="row">
-    <h2>Guesses Left</h2>
-    {numGuessesLeft}
+  <div className='text-center'>
+    <p style={paragraphStyle}>
+      {numGuessesLeft} Guess{numGuessesLeft === 1 ? '' : 'es'} Left
+    </p>
+
     <button
       type='button'
       className='btn btn-success'
+      style={buttonsStyle}
       onClick={() => newGameOnClick()}
     >
       New Game
@@ -20,6 +31,7 @@ const Overview = ({
     <button
       type='button'
       className='btn btn-danger'
+      style={buttonsStyle}
       disabled={hasUserForfeited || hasUserWon}
       onClick={() => forfeitOnClick()}
     >
