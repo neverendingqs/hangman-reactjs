@@ -3,4 +3,6 @@
 
 # hangman-reactjs
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/neverendingqs/hangman-reactjs.svg)](https://greenkeeper.io/)
+
 Popular word guessing game written using React and Redux.
