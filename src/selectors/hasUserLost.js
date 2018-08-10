@@ -4,5 +4,5 @@ import numGuessesRemainingSelector from './numGuessesRemaining';
 
 export default createSelector(
   [numGuessesRemainingSelector],
-  (numGuessesRemaining) => numGuessesRemaining == 0
+  (numGuessesRemaining) => numGuessesRemaining === 0
 );

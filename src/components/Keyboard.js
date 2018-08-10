@@ -50,7 +50,7 @@ class Keyboard extends Component {
   render() {
     return <div>
       {letters.map(row =>
-        <div className='row' style={rowStyle}>
+        <div className='row' key={`row_${row}`} style={rowStyle}>
           {row.map(letter => this.createButton(letter))}
         </div>
       )}
