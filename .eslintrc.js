@@ -7,9 +7,9 @@ module.exports = {
     "extends": "eslint:recommended",
     "parserOptions": {
         "ecmaFeatures": {
-            "experimentalObjectRestSpread": true,
             "jsx": true
         },
+        "ecmaVersion": 6,
         "sourceType": "module"
     },
     "plugins": [
@@ -22,5 +22,11 @@ module.exports = {
         "react/jsx-uses-react": ["error"],
         "react/jsx-uses-vars": ["error"],
         "semi": ["error", "always"]
-    }
+    },
+    "overrides": [{
+      "files": "**/*.test.js",
+      "env": {
+        "jest": true
+      }
+    }]
 };

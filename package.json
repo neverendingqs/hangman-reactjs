@@ -4,9 +4,11 @@
   "description": "React.js Bootstrap",
   "main": "index.js",
   "scripts": {
-    "build": "webpack",
-    "start": "npm run build && webpack-dev-server",
-    "test": "eslint --ignore-path .gitignore ."
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "lint": "eslint --ignore-path .gitignore .",
+    "test": "npm run lint && set CI=true && react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
   },
   "repository": {
     "type": "git",
@@ -21,23 +23,16 @@
   "bugs": {
     "url": "https://github.com/neverendingqs-sandbox/reactjs-bootstrap/issues"
   },
-  "homepage": "https://github.com/neverendingqs-sandbox/reactjs-bootstrap#readme",
   "dependencies": {
-    "random-words": "1.1.0",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
     "react-redux": "^5.0.6",
+    "react-scripts": "1.1.4",
     "redux": "^3.7.2",
     "reselect": "^3.0.1"
   },
   "devDependencies": {
-    "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.2",
-    "babel-preset-react": "^6.24.1",
     "eslint": "^4.12.1",
-    "eslint-plugin-react": "^7.5.1",
-    "html-webpack-plugin": "^2.30.1",
-    "webpack": "^3.9.1",
-    "webpack-dev-server": "^2.9.5"
+    "eslint-plugin-react": "^7.5.1"
   }
 }

@@ -1,4 +1,4 @@
-import randomWords from 'random-words';
+import randomWords from '../lib/randomWords';
 
 export default (state = undefined, action) => {
   switch (action.type) {
