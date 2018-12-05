@@ -35,7 +35,7 @@
   "dependencies": {
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
-    "react-redux": "^5.0.6",
+    "react-redux": "^6.0.0",
     "react-scripts": "2.1.1",
     "redux": "^4.0.0",
     "reselect": "^4.0.0"
